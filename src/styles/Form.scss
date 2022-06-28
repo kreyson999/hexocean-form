@@ -1,0 +1,51 @@
+.form {
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  gap: 1rem;
+
+  hr {
+    border-top: 1px solid var(--dark-gray-color)
+  }
+  &__success {
+    color: var(--green-color);
+  }
+  &__error {
+    color: var(--red-color);
+  }
+
+  &__button {
+    transition: background 0.25s;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: var(--dark-gray-color);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    border-radius: var(--default-border-radius);
+    border: 2px solid var(--dark-gray-color);
+
+    &:hover {
+      color: var(--dark-gray-color);
+      background-color: white;
+    }
+  }
+
+  &__2columns {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .form {
+    min-width: 600px;
+
+    &__2columns {
+      flex-direction: row;
+    }
+  }
+}
